@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>admin panel</title>
+  <link rel="stylesheet" href="admin-style.css" />
+</head>
+<body>
+
+  <h1>admin panel</h1>
+
+  <button class="back-home-btn" onclick="window.location.href='account.html'">back to Profile Page</button>
+
+  <!-- show messages here -->
+  <div id="notification" class="notification"></div>
+
+  <!-- to add car -->
+  <form id="add-car-form">
+    <h2>add new car</h2>
+
+    <input type="text" id="brand" placeholder="brand" required />
+    <input type="text" id="model" placeholder="model" required />
+    <input type="number" id="year" placeholder="year" required />
+    <input type="text" id="licensePlate" placeholder="license plate" required />
+
+    <button type="submit">add car</button>
+  </form>
+
+  <!-- show list of cars -->
+  <div id="car-list">
+    <h2>all cars</h2>
+    <div id="cars-container"></div>
+  </div>
+
+  <!-- connect js file -->
+  <script src="admin.js"></script>
+</body>
+</html>

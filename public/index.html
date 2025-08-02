@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Car Essentials App - Home</title>
+
+  <link rel="stylesheet" href="style.css">
+  <!-- i will use font awesome for style and icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /> 
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div id="notification" class="notification"></div>
+
+    <header>
+      <h1><i class="fas fa-car-side"></i> Car Essentials</h1>
+    <div id="header">
+      <nav class="logout">
+      <ul class="topbar-nav">
+        <li class="nav-logout-wrapper">
+          <form action="/api/logout" method="POST" style="display:inline;">
+            <button type="submit" class="logout-special"> <a href="Login.html">Logout</a></button>
+          </form>
+        </li>
+      </ul>
+    </nav>
+  </div>
+    </header>
+
+      <!-- nav pages buttons -->
+    <nav class="pages">
+      <ul>
+        <li><a href="index.html" class="nav-btn active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="status.html" class="nav-btn"><i class="fas fa-tachometer-alt"></i> Status</a></li>
+        <li><a href="controls.html" class="nav-btn"><i class="fas fa-sliders-h"></i> Controls</a></li>
+        <li><a href="support.html" class="nav-btn"><i class="fas fa-headset"></i> Support</a></li>
+        <li><a href="account.html" class="nav-btn"><i class="fas fa-user-circle"></i> Account</a></li>
+      </ul>
+    </nav>
+    <hr id="pages">
+
+      <!-- main content -->
+    <main id="main-content">
+      <h2>Welcome to Car Essentials!</h2>
+      <hr id="main">
+
+      <!-- car overiew -->
+      <section class="car-overview">
+        <div class="car-summary">
+          <img src="images/my-car.jpg" alt="My Car" class="car-image" />
+          <div class="status-list">
+            <p>🚙 Engine: <strong id="status-engine">Off</strong></p>
+            <p>🚪 Doors: <strong id="status-doors">Locked</strong></p>
+            <p>🔋 Battery: <strong id="status-battery">85%</strong></p>
+            <p>📍 Location: <strong id="status-location">Ramat Gan - Shenkar college</strong></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+      <!-- quick access buttons -->
+    <section class="quick-access">
+      <a href="support.html" class="quick-btn">
+        <i class="fas fa-tools"></i> Road Support
+      </a>
+
+      <button id="nearest-gas-btn" class="quick-btn" type="button">
+        <i class="fas fa-gas-pump"></i> Nearest Gas Station
+      </button>
+
+      <div id="map-options" class="map-options" style="display:none; margin-top: 10px;">
+        <button id="btn-waze" class="small-map-btn">
+          <i class="fab fa-waze"></i> Waze
+        </button>
+        <button id="btn-gmaps" class="small-map-btn">
+          <i class="fab fa-google"></i> Google Maps
+        </button>
+      </div>
+
+      <div id="map-preview" class="map-preview" style="display:none; margin-top: 10px; text-align:center;">
+        <img id="map-image" src="" alt="Map Preview" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.3);" />
+        <br />
+        <button id="hide-map-btn" class="small-map-btn" style="margin-top:10px;">Hide</button>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-brand">
+        <p><i class="fas fa-shield-alt"></i> Car Essentials App</p>
+        <small>&copy; 2025 Mohamad Agbaria & Ibraheem Iraqi</small>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

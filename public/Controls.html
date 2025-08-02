@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Car Essentials App - Controls</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <script>enforceAuth();</script>
+
+  <div id="app">
+    <div id="notification" class="notification"></div>
+
+    <header>
+      <div class="header-container">
+        <h1><i class="fas fa-car-side"></i> Car Essentials</h1>
+        <div id="header">
+          <nav class="logout">
+            <ul class="topbar-nav">
+              <li class="nav-logout-wrapper">
+                <form action="/api/logout" method="POST">
+                  <button type="submit" class="logout-special">logout</button>
+                </form>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <nav class="pages">
+      <ul>
+        <li><a href="index.html" class="nav-btn"><i class="fas fa-home"></i> home</a></li>
+        <li><a href="status.html" class="nav-btn"><i class="fas fa-tachometer-alt"></i> status</a></li>
+        <li><a href="controls.html" class="nav-btn active"><i class="fas fa-sliders-h"></i> controls</a></li>
+        <li><a href="support.html" class="nav-btn"><i class="fas fa-headset"></i> support</a></li>
+        <li><a href="account.html" class="nav-btn"><i class="fas fa-user-circle"></i> account</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-content">
+      <h2>car controls</h2>
+      <div id="controls-container">
+        <!-- controls will load here -->
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-brand">
+        <p><i class="fas fa-shield-alt"></i> Car Essentials App</p>
+        <small>&copy; 2025 Mohamad Agbaria & Ibraheem Iraqi</small>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

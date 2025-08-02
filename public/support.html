@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Car Essentials App - Support</title>
+
+  <link rel="stylesheet" href="/style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <script defer src="app.js"></script>
+
+</head>
+<body>
+  <div id="app">
+    <div id="notification" class="notification"></div>
+
+    <header>
+      <div class="header-container">
+        <h1><i class="fas fa-car-side"></i> Car Essentials - Support</h1>
+            <div id="header">
+      <nav class="logout">
+      <ul class="topbar-nav">
+        <li class="nav-logout-wrapper">
+          <form action="/api/logout" method="POST" style="display:inline;">
+            <button type="submit" class="logout-special"> <a href="Login.html">Logout</a></button>
+          </form>
+        </li>
+      </ul>
+    </nav>
+      </div>
+    </header>
+
+<!-- nav pages buttons -->
+    <nav class="pages">
+      <ul>
+        <li><a href="index.html" class="nav-btn"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="status.html" class="nav-btn"><i class="fas fa-tachometer-alt"></i> Status</a></li>
+        <li><a href="controls.html" class="nav-btn"><i class="fas fa-sliders-h"></i> Controls</a></li>
+        <li><a href="support.html" class="nav-btn active"><i class="fas fa-headset"></i> Support</a></li>
+        <li><a href="account.html" class="nav-btn"><i class="fas fa-user-circle"></i> Account</a></li>
+    </nav>
+
+<!-- main content of support page -->
+    <main id="main-content">
+      <section class="support-contact">
+        <p><strong>Phone:</strong> +972 54-123-4567</p>
+        <p><strong>Email:</strong> support@car-essentials.co.il</p>
+      </section>
+
+      <section class="support-buttons">
+        <a href="tel:+972541234567" class="support-btn" aria-label="Call Road and Car Support">
+          <i class="fas fa-road"></i> Road &amp; Car Support
+        </a>
+        <a href="tel:+972541234568" class="support-btn" aria-label="Call Technical Support">
+          <i class="fas fa-tools"></i> Technical Support
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-brand">
+        <p><i class="fas fa-shield-alt"></i> Car Essentials App</p>
+        <small>&copy; 2025 Mohamad Agbaria &amp; Ibraheem Iraqi</small>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

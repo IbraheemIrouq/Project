@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Car Essentials - Account</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="notification" class="notification"></div>
+
+    <header>
+      <h1><i class="fas fa-car-side"></i> car essentials</h1>
+      <div id="header">
+        <nav class="logout">
+          <ul class="topbar-nav">
+            <li class="nav-logout-wrapper">
+              <button class="logout-special" onclick="logout()">Logout</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- only show this button if user is admin -->
+    <div id="admin-button-container" style="display: none; text-align: center; margin: 15px 0;">
+      <button class="admin-nav-btn" onclick="goToAdmin()">go to admin page</button>
+    </div>
+
+    <nav class="pages">
+      <ul>
+        <li><a href="index.html" class="nav-btn"><i class="fas fa-home"></i> home</a></li>
+        <li><a href="status.html" class="nav-btn"><i class="fas fa-tachometer-alt"></i> status</a></li>
+        <li><a href="controls.html" class="nav-btn"><i class="fas fa-sliders-h"></i> controls</a></li>
+        <li><a href="support.html" class="nav-btn"><i class="fas fa-headset"></i> support</a></li>
+        <li><a href="account.html" class="nav-btn active"><i class="fas fa-user-circle"></i> account</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-content">
+      <h2><i class="fas fa-user-circle"></i> your profile</h2>
+      <hr />
+
+      <section class="profile-grid">
+        <div class="profile-card">
+          <h3>👤 profile summary</h3>
+          <p><strong>name:</strong> <span id="summaryName"></span></p>
+          <p><strong>email:</strong> <span id="summaryEmail"></span></p>
+          <p><strong>phone:</strong> <span id="summaryPhone"></span></p>
+          <button onclick="window.location.href='profile-info.html'">edit profile</button>
+        </div>
+
+        <div class="profile-card">
+          <h3>🚗 my car</h3>
+          <p><strong>brand:</strong> <span id="summaryCarBrand"></span></p>
+          <p><strong>model:</strong> <span id="summaryCarModel"></span></p>
+          <p><strong>year:</strong> <span id="summaryCarYear"></span></p>
+          <p><strong>license plate:</strong> <span id="summaryLicensePlate"></span></p>
+          <button onclick="window.location.href='car-info.html'">edit car info</button>
+        </div>
+      </section>
+    </main>
+
+    <br><br>
+    <hr>
+
+    <footer>
+      <div class="footer-brand">
+        <p><i class="fas fa-shield-alt"></i> car essentials app</p>
+        <small>&copy; 2025 mohamad agbaria & ibraheem iraqi</small>
+      </div>
+    </footer>
+  </div>
+
+  <script src="account.js"></script>
+  <script>
+    //show admin button if user is admin
+    const token = localStorage.getItem('token');
+    if (token) 
+    {
+      try 
+      {
+        const payload = JSON.parse(atob(token.split('.')[1]));
+        if (payload.role === 'admin') 
+        {
+          const box = document.getElementById('admin-button-container');
+          if (box) box.style.display = 'block';
+        }
+      } 
+      catch (e) 
+      {
+        //ignore if token is invalid
+      }
+    }
+
+    //go to admin page
+    function goToAdmin() 
+    {
+      window.location.href = 'admin.html';
+    }
+
+    //logout by clearing localStorage
+    function logout() 
+    {
+      localStorage.clear();
+      window.location.href = 'Login.html';
+    }
+  </script>
+</body>
+</html>

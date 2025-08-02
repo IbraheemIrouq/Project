@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Car Essentials App - Status</title>
+
+  <link rel="stylesheet" href="/style.css">
+    <!-- i will use font awesome for style and icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="app.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div id="notification" class="notification"></div>
+
+    <header>
+      <div class="header-container">
+        <h1><i class="fas fa-car-side"></i> Car Essentials</h1>
+            <div id="header">
+      <nav class="logout">
+      <ul class="topbar-nav">
+        <li class="nav-logout-wrapper">
+          <form action="/api/logout" method="POST" style="display:inline;">
+            <button type="submit" class="logout-special"> <a href="Login.html">Logout</a></button>
+          </form>
+        </li>
+      </ul>
+    </nav>
+      </div>
+    </header>
+
+
+    <!-- nav pages buttons -->
+    <nav class="pages">
+      <ul>
+        <li><a href="index.html" class="nav-btn"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="status.html" class="nav-btn active"><i class="fas fa-tachometer-alt"></i> Status</a></li>
+        <li><a href="controls.html" class="nav-btn"><i class="fas fa-sliders-h"></i> Controls</a></li>
+        <li><a href="support.html" class="nav-btn"><i class="fas fa-headset"></i> Support</a></li>
+        <li><a href="account.html" class="nav-btn"><i class="fas fa-user-circle"></i> Account</a></li>
+    </nav>
+
+    <main id="main-content">
+      <h2>Car Status Overview</h2>
+      <div class="status-cards-grid">
+
+        <div class="status-card">
+          <i class="fas fa-engine-warning fa-2x card-icon"></i>
+          <h3>Engine</h3>
+          <p><strong id="status-engine">Off</strong></p>
+        </div>
+
+        <div class="status-card">
+          <i class="fas fa-door-closed fa-2x card-icon"></i>
+          <h3>Doors</h3>
+          <p><strong id="status-doors">Locked</strong></p>
+        </div>
+
+        <div class="status-card">
+          <i class="fas fa-battery-three-quarters fa-2x card-icon"></i>
+          <h3>Battery</h3>
+          <p><strong id="status-battery">85%</strong></p>
+        </div>
+
+        <div class="status-card">
+          <i class="fas fa-map-marker-alt fa-2x card-icon"></i>
+          <h3>Location</h3>
+          <p><strong id="status-location">Tel Aviv</strong></p>
+        </div>
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-brand">
+        <p><i class="fas fa-shield-alt"></i> Car Essentials App</p>
+        <small>&copy; 2025 Mohamad Agbaria & Ibraheem Iraqi</small>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

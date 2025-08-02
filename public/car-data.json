@@ -1,0 +1,9 @@
+{
+  "location": "Ramat Gan",
+  "distance_from_home": 12.5,
+  "speed": 65,
+  "engine_temp": 88,
+  "oil_temp": 75,
+  "service_date": "2025-07-15",
+  "Car Brand": "Audi E3"
+}
