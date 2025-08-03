@@ -1,0 +1,58 @@
+
+postman link :
+https://app.getpostman.com/join-team?invite_code=1656c84089b159022b009190f7e26fe861b7f6e04d9775aea17a62cb82b7d944
+
+
+mongodp database
+Users Emails and Passwords:
+
+
+_id: 688cee64186ddff8cc59d97f
+name: Admin
+email: admin@example.com
+password: $2b$12$wv11e2ZTgvTiUWao4c7g4uWSJO009JrXs2kZApj1obF/7fpIt/PYy
+password:123456
+role: admin
+phone: 
+createdAt: 2025-08-01T16:42:12.581+00:00
+updatedAt: 2025-08-01T16:42:12.581+00:00
+----------------------------------------
+_id: 688e02dcc262988c23f8fe3c
+name: omar
+email: omar@example.com
+password: $2b$12$C4mEmx6Uj0h6eK4bGxH9IOFznrnRs6JuSP2DjvHo6KLvtvWpA6k42
+password: omar123
+role: user
+phone: 
+createdAt: 2025-08-02T12:21:48.664+00:00
+updatedAt: 2025-08-02T12:21:48.664+00:00
+----------------------------------------
+_id: 688e054ec262988c23f8fe4b
+name: gg
+email: gg@example.com
+password: $2b$12$/5QRTWlSgjq5ynz2e1nGc.LmWTVFLEWQz1Kok.L/hbbIPZdopecua
+role: user
+phone: 
+createdAt: 2025-08-02T12:32:14.889+00:00
+updatedAt: 2025-08-02T12:32:14.889+00:00
+----------------------------------------
+_id: 688e097f5e9c9f3fb72094d6
+name: Mohamad
+email: mohamad@example.com
+password: $2b$12$wWlAJZQdgn7R1R3R2dO8.eeLM/MzE6hs7/Ru4p6U/B71ca/oQRyza
+password: mohamad
+role: user
+phone: 0540000001
+createdAt: 2025-08-02T12:50:07.040+00:00
+updatedAt: 2025-08-02T13:23:06.315+00:00
+----------------------------------------
+_id: 688e4a8c84b8bf725989849b
+name: Username
+email: username@example.com
+password: $2b$12$5NIUVlTvWZco1AryoIGKYexVzjiYAVGzJ3attGWWwK5J7WtTMvnJa
+password: username
+role: user
+phone: 0540000002
+createdAt: 2025-08-02T17:27:40.205+00:00
+updatedAt: 2025-08-02T17:30:16.191+00:00
+----------------------------------------
